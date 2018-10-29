@@ -19,7 +19,7 @@ class Contact extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+    this.props.createMailingList(this.state);
   }
 
   render() {

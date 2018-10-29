@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-const entitiesReducer = combineReducers({
+import mailingListReducer from './mailing_list_reducer';
 
+const entitiesReducer = combineReducers({
+  mailingList: mailingListReducer
 });
 
 export default entitiesReducer;
