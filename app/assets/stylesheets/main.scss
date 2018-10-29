@@ -85,7 +85,7 @@ nav {
 // ======================= SPLASH ========================
 
 main {
-  background: url('https://cdn.pixabay.com/photo/2017/09/10/10/01/background-2734972_1280.jpg') no-repeat;
+  background: url(image_path('splash-background.jpg')) no-repeat;
   background-size: cover;
   height: -webkit-fill-available;
   width: 100%;
