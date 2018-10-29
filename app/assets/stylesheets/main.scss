@@ -51,9 +51,18 @@ table {
 
 // ====================== GLOBAL =======================
 
-h1,h2,h3,h4,h5,h6,
-a {
+h1, h2, h3, h4, h5, h6,
+a, p {
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.black-text {
+  color: black !important;
 }
 
 // ====================== NAVBAR =======================
@@ -63,10 +72,13 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
-
+  
   font-size: 26px;
   color: white;
+  transition: color 1s;
 }
+
+// ======================= SPLASH ========================
 
 main {
   background: url('https://cdn.pixabay.com/photo/2017/09/10/10/01/background-2734972_1280.jpg') no-repeat;
@@ -80,16 +92,70 @@ main {
     vertical-align: middle;
     text-align: center;
 
-    div {
-      width: 20%;
-      height: 20%;
-      border-radius: 20%;
-      position: absolute;
+    img {
+      width: 45%;
     }
-    
-    h1 {
-      font-size: 6em;
-      color: white;
+
+  }
+
+  div {
+    width: 100%;
+
+    a {
+      text-align: center;
+      padding: 15px;
+
+      border: 3px solid white;
+      border-radius: 5px;
+      font-size: 2em;
+    }
+
+    a:hover {
+      background-color: white;
+      color: blue;
+
+      transition: color 1s;
+      transition: background-color 1s;
     }
   }
+}
+
+// ====================== SPLASH POSTS ========================
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  div {
+    align-self: center;
+    width: 95%;
+    
+    h1 {
+      width: 95%;
+      margin: 0 auto;
+      
+      font-size: 3.5em;
+    }
+    
+    p {
+      width: 95%;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+  }
+
+  img {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+// ===================== INSTA SECTION ==============================
+
+#insta-section {
+  background: url(image_path('grid.png')) repeat;
+  height: 300px;
+  width: 100%;
+
 }

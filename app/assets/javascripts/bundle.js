@@ -129,6 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _navbar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar/navbar */ "./frontend/components/navbar/navbar.jsx");
 /* harmony import */ var _splash_splash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./splash/splash */ "./frontend/components/splash/splash.jsx");
+/* harmony import */ var _splash_posts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./splash/posts */ "./frontend/components/splash/posts.jsx");
+/* harmony import */ var _insta_section_insta_section__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./insta_section/insta_section */ "./frontend/components/insta_section/insta_section.jsx");
+
+
 
 
 
@@ -142,10 +146,41 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _splash_splash__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _splash_posts__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _insta_section_insta_section__WEBPACK_IMPORTED_MODULE_5__["default"]
   }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./frontend/components/insta_section/insta_section.jsx":
+/*!*************************************************************!*\
+  !*** ./frontend/components/insta_section/insta_section.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var InstaSection = function InstaSection() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    id: "insta-section"
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (InstaSection);
 
 /***/ }),
 
@@ -160,11 +195,73 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 
-var Navbar = function Navbar() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "about"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Colorama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "faq"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "contact"));
-};
+
+var Navbar =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Navbar, _React$Component);
+
+  function Navbar(props) {
+    var _this;
+
+    _classCallCheck(this, Navbar);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Navbar).call(this, props));
+    _this.handleScroll = _this.handleScroll.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(Navbar, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: "handleScroll",
+    value: function handleScroll() {
+      var windowPos = window.scrollY;
+      var postPos = $(".post").position().top;
+      var navbar = document.getElementById('navbar');
+      var blackText = Array.from(navbar.classList).includes('black-text');
+
+      if (windowPos >= postPos && !blackText) {
+        navbar.classList.add('black-text');
+      } else if (windowPos < postPos && blackText) {
+        navbar.classList.remove('black-text');
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        id: "navbar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "about"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.showclix.com/event/colorama"
+      }, "tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Colorama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "faq"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "contact"));
+    }
+  }]);
+
+  return Navbar;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
@@ -200,6 +297,35 @@ var Root = function Root(_ref) {
 
 /***/ }),
 
+/***/ "./frontend/components/splash/posts.jsx":
+/*!**********************************************!*\
+  !*** ./frontend/components/splash/posts.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Posts = function Posts() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "A world inspired by the colors and magic that shines from you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Colorama is a temporary interactive experience specially designed for the city of Barcelona."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You are invited to explore and share your true colors in this fantasy world!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: window.post1
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: window.post2
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TICKET PRICE 26\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OPEN UNTIL 15 DECEMBER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OPEN DAILY 11:00 - 21:00"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Posts);
+
+/***/ }),
+
 /***/ "./frontend/components/splash/splash.jsx":
 /*!***********************************************!*\
   !*** ./frontend/components/splash/splash.jsx ***!
@@ -216,7 +342,11 @@ __webpack_require__.r(__webpack_exports__);
 var Splash = function Splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "An interactive experience"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Colorama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "BCN")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: window.logo
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.showclix.com/event/colorama"
+  }, "Purchase Tickets Here"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
