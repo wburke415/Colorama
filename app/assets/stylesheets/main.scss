@@ -84,8 +84,8 @@ nav {
 
 // ======================= SPLASH ========================
 
-main {
-  background: url(image_path('splash-background.jpg')) no-repeat;
+.splash {
+  background: url(image_path('splash-background.jpg')) no-repeat fixed;
   background-size: cover;
   height: -webkit-fill-available;
   width: 100%;
@@ -112,14 +112,13 @@ main {
       border: 3px solid white;
       border-radius: 5px;
       font-size: 2em;
+      
+      transition: background-color 500ms;
     }
-
+    
     a:hover {
       background-color: white;
-      color: blue;
-
-      transition: color 1s;
-      transition: background-color 1s;
+      color: blue; 
     }
   }
 }
