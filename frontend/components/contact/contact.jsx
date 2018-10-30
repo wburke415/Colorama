@@ -6,7 +6,8 @@ class Contact extends React.Component {
     super(props);
 
     this.state = {
-      email: ''
+      email: '',
+      subscribed: false
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -19,12 +20,19 @@ class Contact extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createMailingList(this.state);
+    this.props.createMailingList({ email: this.state.email })
+    .then(() => {
+      if (Object.values(this.props.mailingList).includes('Success')) {
+        this.setState({ subscribed: true });
+      }
+    });
   }
 
   render() {
     return (
-      <section>
+      <section id="contact">
+
+        <i className="far fa-envelope"></i>
         
         <div className="middle">
           <h1>Sign up for our newsletter!</h1>
@@ -34,6 +42,9 @@ class Contact extends React.Component {
             <input type="submit" value="subscribe!" />
           </form>
         </div>
+
+        <i className="far fa-envelope"></i>
+
       </section>
     );
   }

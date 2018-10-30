@@ -53,7 +53,7 @@ table {
 
 h1, h2, h3, h4, h5, h6,
 a, p {
-  font-family: sans-serif;
+  font-family: 'Rancho', cursive, sans-serif;
 }
 
 a {
@@ -74,11 +74,14 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding-top: 10px;
   
   a {
     font-size: 26px;
     color: white;
     transition: color 500ms;
+    font-family: 'Fascinate Inline', cursive;
+    cursor: pointer;
   }
 }
 
@@ -144,7 +147,7 @@ nav {
     p {
       width: 95%;
       margin-top: 30px;
-      font-size: 18px;
+      font-size: 23px;
     }
   }
 
@@ -156,7 +159,7 @@ nav {
 
 // ===================== INSTA SECTION ==============================
 
-#insta-section {
+#insta {
   background: url(image_path('grid.png')) repeat;
   width: 100%;
   padding: 30px;
@@ -173,5 +176,61 @@ nav {
       height: 350px;
       object-fit: cover;
     }
+  }
+}
+
+// ====================== CONTACT ===========================
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="email"] {
+      width: 60%;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 5px 15px;
+    }
+
+    input[type="submit"] {
+      background-color: blue;
+      margin-left: 15px;
+      width: 30%;
+      padding: 5px 10px;
+      
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+
+  i {
+    font-size: 7em;
+    color: blue;
+    transform: rotate(15deg);
+  }
+
+  i:first-of-type {
+    transform: rotate(-15deg);
   }
 }

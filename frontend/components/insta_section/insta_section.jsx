@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InstaSection = () => (
-  <section id="insta-section">
+  <section id="insta">
 
     <div className="insta-row">
       <img src={window.insta1}/>
@@ -14,7 +14,7 @@ const InstaSection = () => (
       <img src={window.insta5}/>
       <img src={window.insta6}/>
     </div>
-    
+
   </section>
 );
 

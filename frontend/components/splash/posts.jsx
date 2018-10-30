@@ -2,7 +2,7 @@ import React from 'react';
 
 const Posts = () => (
   <section>
-    <div className="post">
+    <div className="post" id="about">
 
       <div>
         <h1>A world inspired by the colors and magic that shines from you</h1>
@@ -13,7 +13,7 @@ const Posts = () => (
       <img src={window.post1} />
     </div>
 
-    <div className="post">
+    <div className="post" id="faq">
 
       <img src={window.post2} />
 

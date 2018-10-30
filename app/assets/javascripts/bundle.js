@@ -90,27 +90,38 @@
 /*!**************************************************!*\
   !*** ./frontend/actions/mailing_list_actions.js ***!
   \**************************************************/
-/*! exports provided: RECEIVE_MAILING_LIST, receiveMailingList, createMailingList */
+/*! exports provided: RECEIVE_MAILING_LIST, RECEIVE_MAILING_LIST_ERRORS, receiveMailingList, receiveMailingListErrors, createMailingList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MAILING_LIST", function() { return RECEIVE_MAILING_LIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MAILING_LIST_ERRORS", function() { return RECEIVE_MAILING_LIST_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveMailingList", function() { return receiveMailingList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveMailingListErrors", function() { return receiveMailingListErrors; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createMailingList", function() { return createMailingList; });
-/* harmony import */ var _util_mailing_list_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/mailing_list_util */ "./frontend/util/mailing_list_util.js");
+/* harmony import */ var _util_mailing_list_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/mailing_list_util */ "./frontend/util/mailing_list_util.js");
 
 var RECEIVE_MAILING_LIST = 'RECEIVE_MAILING_LIST';
+var RECEIVE_MAILING_LIST_ERRORS = 'RECEIVE_MAILING_LIST_ERRORS';
 var receiveMailingList = function receiveMailingList(email) {
   return {
     type: RECEIVE_MAILING_LIST,
     email: email
   };
 };
+var receiveMailingListErrors = function receiveMailingListErrors(errors) {
+  return {
+    type: RECEIVE_MAILING_LIST_ERRORS,
+    errors: errors
+  };
+};
 var createMailingList = function createMailingList(email) {
   return function (dispatch) {
-    return _util_mailing_list_util__WEBPACK_IMPORTED_MODULE_1__["createMailingList"](email).then(function (email) {
+    return _util_mailing_list_util__WEBPACK_IMPORTED_MODULE_0__["createMailingList"](email).then(function (email) {
       return dispatch(receiveMailingList(email));
+    }).fail(function (errors) {
+      return dispatch(receiveMailingListErrors(errors));
     });
   };
 };
@@ -241,7 +252,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Contact).call(this, props));
     _this.state = {
-      email: ''
+      email: '',
+      subscribed: false
     };
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
@@ -258,13 +270,27 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this2 = this;
+
       e.preventDefault();
-      this.props.createMailingList(this.state);
+      this.props.createMailingList({
+        email: this.state.email
+      }).then(function () {
+        if (Object.values(_this2.props.mailingList).includes('Success')) {
+          _this2.setState({
+            subscribed: true
+          });
+        }
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        id: "contact"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-envelope"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "middle"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Sign up for our newsletter!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
@@ -276,7 +302,9 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         value: "subscribe!"
-      }))));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "far fa-envelope"
+      }));
     }
   }]);
 
@@ -298,20 +326,26 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact */ "./frontend/components/contact/contact.jsx");
-/* harmony import */ var _actions_mailing_list_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/mailing_list_actions */ "./frontend/actions/mailing_list_actions.js");
+/* harmony import */ var _actions_mailing_list_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/mailing_list_actions */ "./frontend/actions/mailing_list_actions.js");
 
 
 
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    mailingList: state.entities.mailingList
+  };
+};
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     createMailingList: function createMailingList(email) {
-      return dispatch(Object(_actions_mailing_list_actions__WEBPACK_IMPORTED_MODULE_3__["createMailingList"])(email));
+      return dispatch(Object(_actions_mailing_list_actions__WEBPACK_IMPORTED_MODULE_2__["createMailingList"])(email));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapDispatchToProps)(_contact__WEBPACK_IMPORTED_MODULE_1__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_contact__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -330,7 +364,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var InstaSection = function InstaSection() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    id: "insta-section"
+    id: "insta"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "insta-row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -404,6 +438,34 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       window.addEventListener('scroll', this.handleScroll);
+      var about = document.getElementById('about-nav');
+      var insta = document.getElementById('insta-nav');
+      var faq = document.getElementById('faq-nav');
+      var contact = document.getElementById('contact-nav');
+      about.addEventListener('click', function () {
+        document.getElementById('about').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+      insta.addEventListener('click', function () {
+        document.getElementById("insta").scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+      faq.addEventListener('click', function () {
+        document.getElementById("faq").scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+      contact.addEventListener('click', function () {
+        document.getElementById("contact").scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
     }
   }, {
     key: "handleScroll",
@@ -424,9 +486,18 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         id: "navbar"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "about"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://www.showclix.com/event/colorama"
-      }, "tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Colorama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "faq"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "contact"));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        id: "about-nav"
+      }, "about"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.showclix.com/event/colorama",
+        target: "_blank"
+      }, "tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        id: "insta-nav"
+      }, "Colorama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        id: "faq-nav"
+      }, "faq"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        id: "contact-nav"
+      }, "contact"));
     }
   }]);
 
@@ -482,11 +553,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var Posts = function Posts() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "post"
+    className: "post",
+    id: "about"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "A world inspired by the colors and magic that shines from you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Colorama is a temporary interactive experience specially designed for the city of Barcelona."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You are invited to explore and share your true colors in this fantasy world!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post1
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "post"
+    className: "post",
+    id: "faq"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post2
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TICKET PRICE 26\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OPEN UNTIL 15 DECEMBER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OPEN DAILY 11:00 - 21:00"))));
@@ -605,6 +678,26 @@ var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers
 
 /***/ }),
 
+/***/ "./frontend/reducers/errors_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/errors_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _mailing_list_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mailing_list_reducer */ "./frontend/reducers/mailing_list_reducer.js");
+
+
+var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  mailingListErrors: _mailing_list_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
+/* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
+
+/***/ }),
+
 /***/ "./frontend/reducers/mailing_list_reducer.js":
 /*!***************************************************!*\
   !*** ./frontend/reducers/mailing_list_reducer.js ***!
@@ -649,10 +742,13 @@ var mailingListReducer = function mailingListReducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _entities_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./entities_reducer */ "./frontend/reducers/entities_reducer.js");
+/* harmony import */ var _errors_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors_reducer */ "./frontend/reducers/errors_reducer.js");
+
 
 
 var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  errors: _errors_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 

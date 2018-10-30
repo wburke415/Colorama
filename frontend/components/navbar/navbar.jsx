@@ -10,6 +10,27 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+
+    let about = document.getElementById('about-nav');
+    let insta = document.getElementById('insta-nav');
+    let faq = document.getElementById('faq-nav');
+    let contact = document.getElementById('contact-nav');
+
+    about.addEventListener('click', () => {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'start' })
+    });
+
+    insta.addEventListener('click', () => {
+      document.getElementById("insta").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    faq.addEventListener('click', () => {
+      document.getElementById("faq").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    contact.addEventListener('click', () => {
+      document.getElementById("contact").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
   handleScroll() {
@@ -29,11 +50,11 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav id="navbar">
-        <a>about</a>
-        <a href="https://www.showclix.com/event/colorama">tickets</a>
-        <a>Colorama</a>
-        <a>faq</a>
-        <a>contact</a>
+        <a id="about-nav">about</a>
+        <a href="https://www.showclix.com/event/colorama" target="_blank">tickets</a>
+        <a id="insta-nav">Colorama</a>
+        <a id="faq-nav">faq</a>
+        <a id="contact-nav">contact</a>
       </nav>
     );
   }

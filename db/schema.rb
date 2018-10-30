@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_215510) do
+ActiveRecord::Schema.define(version: 2018_10_29_224143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "mailing_list", force: :cascade do |t|
+  create_table "mailing_lists", force: :cascade do |t|
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_mailing_list_on_email"
+    t.index ["email"], name: "index_mailing_lists_on_email", unique: true
   end
 
 end
