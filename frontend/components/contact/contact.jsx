@@ -32,18 +32,21 @@ class Contact extends React.Component {
     return (
       <section id="contact">
 
-        <i className="far fa-envelope"></i>
-        
-        <div className="middle">
-          <h1>Sign up for our newsletter!</h1>
+        <div class="top">
+          <i className="far fa-envelope"></i>
+          
+          <div className="middle">
+            <h1>Sign up for our newsletter!</h1>
 
-          <form onSubmit={this.handleSubmit} >
-            <input type="email" required placeholder="Email address" onChange={this.handleInput} />
-            <input type="submit" value="subscribe!" />
-          </form>
+            <form onSubmit={this.handleSubmit} >
+              <input type="email" required placeholder="Email address" onChange={this.handleInput} />
+              <input type="submit" value="subscribe!" />
+            </form>
+          </div>
+
+          <i className="far fa-envelope"></i>
         </div>
 
-        <i className="far fa-envelope"></i>
 
       </section>
     );

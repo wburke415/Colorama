@@ -288,6 +288,8 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "contact"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        class: "top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-envelope"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -304,7 +306,7 @@ function (_React$Component) {
         value: "subscribe!"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-envelope"
-      }));
+      })));
     }
   }]);
 
