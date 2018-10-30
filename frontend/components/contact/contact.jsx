@@ -32,7 +32,7 @@ class Contact extends React.Component {
     return (
       <section id="contact">
 
-        <div class="top">
+        <div className="top">
           <i className="far fa-envelope"></i>
           
           <div className="middle">
@@ -47,6 +47,19 @@ class Contact extends React.Component {
           <i className="far fa-envelope"></i>
         </div>
 
+        <div className="bottom">
+          <h1>PASSEIG DE GRÁCIA, 114 BARCELONA 08008</h1>
+
+          <span className="links">
+            <a href="mailto:info@coloramabcn.com">email</a>
+            <span>|</span>
+            <a href="https://www.instagram.com/coloramabcn/" target="_blank">instagram</a>
+            <span>|</span>
+            <a href="https://www.showclix.com/event/colorama" target="_blank">tickets</a>
+          </span>
+
+          {/* <p id="copyright">&copy; Derechos de Autor 2018 Colorama. Todos los derechos reservados.</p> */}
+        </div>
 
       </section>
     );

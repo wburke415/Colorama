@@ -289,7 +289,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "contact"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        class: "top"
+        className: "top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-envelope"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -306,7 +306,19 @@ function (_React$Component) {
         value: "subscribe!"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-envelope"
-      })));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "bottom"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "links"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "mailto:info@coloramabcn.com"
+      }, "email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.instagram.com/coloramabcn/",
+        target: "_blank"
+      }, "instagram"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://www.showclix.com/event/colorama",
+        target: "_blank"
+      }, "tickets"))));
     }
   }]);
 
