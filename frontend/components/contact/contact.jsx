@@ -39,8 +39,8 @@ class Contact extends React.Component {
             <h1>Suscríbase a nuestro boletín de noticias!</h1>
 
             <form onSubmit={this.handleSubmit} >
-              <input type="email" required placeholder="Email address" onChange={this.handleInput} />
-              <input type="submit" value="subscribe!" />
+              <input type="email" required placeholder="Email dirección" onChange={this.handleInput} />
+              <input type="submit" value="¡suscribir!" />
             </form>
           </div>
 

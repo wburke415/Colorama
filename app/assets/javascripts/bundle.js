@@ -299,11 +299,11 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
         required: true,
-        placeholder: "Email address",
+        placeholder: "Email direcci\xF3n",
         onChange: this.handleInput
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
-        value: "subscribe!"
+        value: "\xA1suscribir!"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "far fa-envelope"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
