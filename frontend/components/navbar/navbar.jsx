@@ -50,11 +50,11 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav id="navbar">
-        <a id="about-nav">about</a>
-        <a href="https://www.showclix.com/event/colorama" target="_blank">tickets</a>
+        <a id="about-nav">acerca de</a>
+        <a href="https://www.showclix.com/event/colorama" target="_blank">Entradas</a>
         <a id="insta-nav">Colorama</a>
         <a id="faq-nav">faq</a>
-        <a id="contact-nav">contact</a>
+        <a id="contact-nav">contacto</a>
       </nav>
     );
   }

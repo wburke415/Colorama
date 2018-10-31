@@ -294,7 +294,7 @@ function (_React$Component) {
         className: "far fa-envelope"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "middle"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Sign up for our newsletter!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Suscr\xEDbase a nuestro bolet\xEDn de noticias!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
@@ -318,7 +318,7 @@ function (_React$Component) {
       }, "instagram"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.showclix.com/event/colorama",
         target: "_blank"
-      }, "tickets"))));
+      }, "entrada"))));
     }
   }]);
 
@@ -502,16 +502,16 @@ function (_React$Component) {
         id: "navbar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "about-nav"
-      }, "about"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "acerca de"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.showclix.com/event/colorama",
         target: "_blank"
-      }, "tickets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Entradas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "insta-nav"
       }, "Colorama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "faq-nav"
       }, "faq"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         id: "contact-nav"
-      }, "contact"));
+      }, "contacto"));
     }
   }]);
 
@@ -569,14 +569,14 @@ var Posts = function Posts() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "post",
     id: "about"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "A world inspired by the colors and magic that shines from you"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Colorama is a temporary interactive experience specially designed for the city of Barcelona."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You are invited to explore and share your true colors in this fantasy world!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Un mundo inspirado en los colores y la magia que brilla en ti."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Colorama es una experiencia interactiva temporal especialmente dise\xF1ada para la ciudad de Barcelona."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xA1Te invitamos a explorar y compartir tus verdaderos colores en este mundo de fantas\xEDa!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post1
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "post",
     id: "faq"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post2
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TICKET PRICE 26\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OPEN UNTIL 15 DECEMBER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OPEN DAILY 11:00 - 21:00"))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PRECIO DE ENTRADA 26\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO HASTA EL 15 DE DICIEMBRE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO TODOS LOS D\xCDAS 11:00 - 21:00"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
@@ -661,7 +661,7 @@ function (_React$Component) {
         src: window.logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.showclix.com/event/colorama"
-      }, "Purchase Tickets Here"))));
+      }, "Comprar entradas aqu\xED"))));
     }
   }]);
 

@@ -36,7 +36,7 @@ class Contact extends React.Component {
           <i className="far fa-envelope"></i>
           
           <div className="middle">
-            <h1>Sign up for our newsletter!</h1>
+            <h1>Suscríbase a nuestro boletín de noticias!</h1>
 
             <form onSubmit={this.handleSubmit} >
               <input type="email" required placeholder="Email address" onChange={this.handleInput} />
@@ -55,7 +55,7 @@ class Contact extends React.Component {
             <span>|</span>
             <a href="https://www.instagram.com/coloramabcn/" target="_blank">instagram</a>
             <span>|</span>
-            <a href="https://www.showclix.com/event/colorama" target="_blank">tickets</a>
+            <a href="https://www.showclix.com/event/colorama" target="_blank">entrada</a>
           </span>
 
           {/* <p id="copyright">&copy; Derechos de Autor 2018 Colorama. Todos los derechos reservados.</p> */}

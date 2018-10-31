@@ -5,9 +5,9 @@ const Posts = () => (
     <div className="post" id="about">
 
       <div>
-        <h1>A world inspired by the colors and magic that shines from you</h1>
-        <p>Colorama is a temporary interactive experience specially designed for the city of Barcelona.</p>
-        <p>You are invited to explore and share your true colors in this fantasy world!</p>
+        <h1>Un mundo inspirado en los colores y la magia que brilla en ti.</h1>
+        <p>Colorama es una experiencia interactiva temporal especialmente diseñada para la ciudad de Barcelona.</p>
+        <p>¡Te invitamos a explorar y compartir tus verdaderos colores en este mundo de fantasía!</p>
       </div>
 
       <img src={window.post1} />
@@ -18,10 +18,10 @@ const Posts = () => (
       <img src={window.post2} />
 
       <div>
-        <p>TICKET PRICE 26€</p>
-        <p>OPEN UNTIL 15 DECEMBER</p>
+        <p>PRECIO DE ENTRADA 26€</p>
+        <p>ABIERTO HASTA EL 15 DE DICIEMBRE</p>
         <p>PASSEIG DE GRÁCIA, 114 BARCELONA 08008</p>
-        <p>OPEN DAILY 11:00 - 21:00</p>
+        <p>ABIERTO TODOS LOS DÍAS 11:00 - 21:00</p>
       </div>
     </div>
   </section>
