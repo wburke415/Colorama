@@ -76,7 +76,7 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
   background-image: linear-gradient(to top, transparent, black);
   color: white;
   
@@ -90,8 +90,13 @@ nav {
 
 // ======================= SPLASH ========================
 
-.splash {
-  background: url(image_path('splash-background.jpg')) no-repeat fixed;
+#splash {
+  // background: url(image_path('splash-background.jpg')) no-repeat fixed;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  
   background-size: cover;
   height: -webkit-fill-available;
   width: 100%;
@@ -150,6 +155,7 @@ nav {
     
     p {
       width: 95%;
+      margin: 0 auto;
       margin-top: 30px;
       font-size: 26px;
     }

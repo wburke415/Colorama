@@ -613,6 +613,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
+var BACKGROUND_IMAGES = [window.splash1, window.splash2, window.splash3];
 
 var Splash =
 /*#__PURE__*/
@@ -620,14 +621,22 @@ function (_React$Component) {
   _inherits(Splash, _React$Component);
 
   function Splash(props) {
+    var _this;
+
     _classCallCheck(this, Splash);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Splash).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Splash).call(this, props));
+    _this.state = {
+      bgImage: 1
+    };
+    return _this;
   }
 
   _createClass(Splash, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       $(function () {
         // Cache the window object
         var $window = $(window); // Parallax background effect
@@ -647,14 +656,29 @@ function (_React$Component) {
           }); // end window scroll
         });
       });
+      var background = $('#splash');
+      background.css("background-image", "url(".concat(BACKGROUND_IMAGES[0], ")"));
+      setInterval(function () {
+        background.css('background-image', "url(".concat(BACKGROUND_IMAGES[_this2.state.bgImage], ")"));
+
+        if (_this2.state.bgImage >= BACKGROUND_IMAGES.length - 1) {
+          _this2.setState({
+            bgImage: 0
+          });
+        } else {
+          _this2.setState({
+            bgImage: _this2.state.bgImage + 1
+          });
+        }
+      }, 4000);
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "splash",
+        id: "splash",
         "data-type": "background",
-        "data-speed": "3"
+        "data-speed": "2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "splash-title"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {

@@ -1,9 +1,15 @@
 import React from 'react';
 
+const BACKGROUND_IMAGES = [window.splash1, window.splash2, window.splash3];
+
 class Splash extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      bgImage: 1
+    }
   }
 
   componentDidMount() {
@@ -35,11 +41,27 @@ class Splash extends React.Component {
       });
 
     });
+
+    let background = $('#splash');
+    background.css("background-image", `url(${BACKGROUND_IMAGES[0]})`);
+
+    setInterval(() => {
+      background.css('background-image', `url(${BACKGROUND_IMAGES[this.state.bgImage]})`);
+
+      if (this.state.bgImage >= BACKGROUND_IMAGES.length - 1) {
+        this.setState({bgImage: 0});
+      } else {
+        this.setState({bgImage: this.state.bgImage + 1});
+      }
+
+    }, 4000)
+
+
   }
 
   render() {
     return (
-      <section className="splash" data-type="background" data-speed="3">
+      <section id="splash" data-type="background" data-speed="2">
         <div className="splash-title">
           {/* <div>An interactive experience</div> */}
     
