@@ -576,7 +576,7 @@ var Posts = function Posts() {
     id: "faq"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post2
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PRECIO DE ENTRADA 26\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO HASTA EL 15 DE DICIEMBRE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO TODOS LOS D\xCDAS 11:00 - 21:00"))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PRECIO DE ENTRADA 15\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO HASTA EL 15 DE DICIEMBRE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO TODOS LOS D\xCDAS 11:00 - 21:00"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
