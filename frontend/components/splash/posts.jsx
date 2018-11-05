@@ -18,7 +18,7 @@ const Posts = () => (
       <img src={window.post2} />
 
       <div>
-        <p>PRECIO DE ENTRADA 26€</p>
+        <p>PRECIO DE ENTRADA 15€</p>
         <p>ABIERTO HASTA EL 15 DE DICIEMBRE</p>
         <p>PASSEIG DE GRÁCIA, 114 BARCELONA 08008</p>
         <p>ABIERTO TODOS LOS DÍAS 11:00 - 21:00</p>
