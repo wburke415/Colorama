@@ -21,7 +21,8 @@ const Posts = () => (
         <p>PRECIO DE ENTRADA 15€</p>
         <p>ABIERTO HASTA EL 15 DE DICIEMBRE</p>
         <p>PASSEIG DE GRÁCIA, 114 BARCELONA 08008</p>
-        <p>ABIERTO TODOS LOS DÍAS 11:00 - 21:00</p>
+        <p>MARTES-VIERNES 16:00-21:00</p>
+        <p>SABADO Y DOMINGO 12:00-21:00</p>
       </div>
     </div>
   </section>
