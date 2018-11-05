@@ -572,11 +572,19 @@ var Posts = function Posts() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Un mundo inspirado en los colores y la magia que brilla en ti."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Colorama es una experiencia interactiva temporal especialmente dise\xF1ada para la ciudad de Barcelona."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xA1Te invitamos a explorar y compartir tus verdaderos colores en este mundo de fantas\xEDa!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post1
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "post",
-    id: "faq"
+    className: "post"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: window.post2
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PRECIO DE ENTRADA 15\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO HASTA EL 15 DE DICIEMBRE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARTES-VIERNES 16:00-21:00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "SABADO Y DOMINGO 12:00-21:00"))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PRECIO DE ENTRADA 15\u20AC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ABIERTO HASTA EL 15 DE DICIEMBRE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "PASSEIG DE GR\xC1CIA, 114 BARCELONA 08008"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "MARTES-VIERNES 16:00-21:00"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "SABADO Y DOMINGO 12:00-21:00"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "post",
+    id: "faq"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xBFQu\xE9 es? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\xA1Colorama es un museo \"pop-up\" envolvente con 10 habitaciones de dise\xF1o vibrante, cada una con una interacci\xF3n \xFAnica y algunas delicias especiales en el camino! ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Echa un vistazo a un video de nuestra fiesta de apertura a continuaci\xF3n!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+    width: "90%",
+    controls: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+    src: window.faqVideo,
+    type: "video/mp4"
+  }), "Your browser does not support the video tag."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
