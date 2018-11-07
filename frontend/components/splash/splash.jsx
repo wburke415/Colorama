@@ -67,6 +67,7 @@ class Splash extends React.Component {
     
           <img src={window.logo}/>
           <div><a href="https://www.showclix.com/event/colorama">Comprar entradas aquí</a></div>
+          <p class="charity">El 10% de los beneficios van a caridad.</p>
         </div>
       </section>
     );

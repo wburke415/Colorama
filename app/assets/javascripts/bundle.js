@@ -693,7 +693,9 @@ function (_React$Component) {
         src: window.logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://www.showclix.com/event/colorama"
-      }, "Comprar entradas aqu\xED"))));
+      }, "Comprar entradas aqu\xED")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        class: "charity"
+      }, "El 10% de los beneficios van a caridad.")));
     }
   }]);
 
