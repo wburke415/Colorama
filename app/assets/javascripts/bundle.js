@@ -586,7 +586,7 @@ var Posts = function Posts() {
     type: "video/mp4"
   }), "Your browser does not support the video tag."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news-post"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Colorama en las Noticias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Colorama en las noticias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.timeout.cat/barcelona/ca/que-fer/colorama",

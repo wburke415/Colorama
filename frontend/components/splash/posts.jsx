@@ -51,7 +51,7 @@ const Posts = () => (
     </div>
 
     <div className="news-post">
-      <h1>Colorama en las Noticias</h1>
+      <h1>Colorama en las noticias</h1>
 
       <div className="news-content">
         <a href="https://www.timeout.cat/barcelona/ca/que-fer/colorama" target="_blank">
