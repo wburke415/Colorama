@@ -49,6 +49,20 @@ const Posts = () => (
         </video>
       </section>
     </div>
+
+    <div className="news-post">
+      <h1>Colorama en las Noticias</h1>
+
+      <div className="news-content">
+        <a href="https://www.timeout.cat/barcelona/ca/que-fer/colorama" target="_blank">
+          <img className="timeout-logo" src={window.timeoutLogo} />
+        </a>
+
+        <a href="https://beteve.cat/cultura/colorama-galeria-comas" target="_blank">
+          <img className="beteve-logo" src={window.beteveLogo} />
+        </a>
+      </div>
+    </div>
   </section>
 );    
 

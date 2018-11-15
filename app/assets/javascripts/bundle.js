@@ -584,7 +584,23 @@ var Posts = function Posts() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
     src: window.faqVideo,
     type: "video/mp4"
-  }), "Your browser does not support the video tag."))));
+  }), "Your browser does not support the video tag."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "news-post"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Colorama en las Noticias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "news-content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.timeout.cat/barcelona/ca/que-fer/colorama",
+    target: "_blank"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "timeout-logo",
+    src: window.timeoutLogo
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://beteve.cat/cultura/colorama-galeria-comas",
+    target: "_blank"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "beteve-logo",
+    src: window.beteveLogo
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
